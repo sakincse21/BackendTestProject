@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "51915d8b-cb38-416d-abc1-89393edc773b",
+		"name": "BackendTestProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40897477"
+	},
+	"item": [
+		{
+			"name": "Lock Table",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tableId\": \"table-123\",\n    \"userId\": \"user-abc\",\n    \"duration\": 600\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tables/lock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tables",
+						"lock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unlock Table",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tableId\": \"table-123\",\n    \"userId\": \"user-abc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tables/unlock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tables",
+						"unlock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Table Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/tables/table-002/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tables",
+						"table-002",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
