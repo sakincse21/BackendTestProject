@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import { Server } from "http";
-import mongoose from "mongoose";
 import app from "./app";
 import { envVars } from "./app/configs/env";
 
@@ -9,8 +8,6 @@ let server: Server;
 const startServer = async () => {
   try {
     console.log(`Running server in ${envVars.NODE_ENV} mode`)
-    await mongoose.connect(envVars.MONGODB_URL as string);
-    console.log("Connected to MONGODB");
     server = app.listen(envVars.PORT, () => {
       console.log(`Server stated on port ${envVars.PORT}`);
     });
